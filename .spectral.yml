@@ -11,11 +11,11 @@ rules:
     severity: error
     given: '$..[?(@ && @.type=="string")]'
     then:
-    function: schema
-    functionOptions:
-      schema:
-         type: object
-         oneOf:
-         - required: ["maxLength"]
-         - required: ["enum"]
-         - required: ["const"]
+      function: schema
+      functionOptions:
+        schema:
+          type: object
+          oneOf:
+            - required: ["maxLength"]
+            - required: ["enum"]
+            - required: ["const"]
