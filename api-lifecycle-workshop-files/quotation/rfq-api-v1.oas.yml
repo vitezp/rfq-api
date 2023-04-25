@@ -1,17 +1,30 @@
 openapi: '3.0.2'
 info:
   title: Quotation API
+  description: Get a quote online
   version: '1.0'
+  contact:
+    email: ptr.vtz@gmail.com
 servers:
   - url: https://api.server.test/v1
+tags:
+  - name: Quote
 paths:
   /test:
     get:
+      description: Testing endpoint
+      operationid: getTest
+      tags:
+        - Quote
       responses:
         '200':
           description: OK
   /rfqs:
     post:
+      tags:
+        - Quote
+      description: Request a quote
+      operationId: postQuote
       requestBody:
         content:
           application/json:
