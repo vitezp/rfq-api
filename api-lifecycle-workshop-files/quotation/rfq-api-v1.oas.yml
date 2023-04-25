@@ -13,7 +13,7 @@ paths:
   /test:
     get:
       description: Testing endpoint
-      operationid: getTest
+      operationId: getTest
       tags:
         - Quote
       responses:
